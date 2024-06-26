@@ -108,4 +108,8 @@ class Product
 
         return $this;
     }
+
+    public function __tostring(){
+        return $this->name;
+    }
 }
