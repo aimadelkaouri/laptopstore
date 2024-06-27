@@ -26,7 +26,7 @@ class OrderController extends AbstractController
     #[Route('/user/orders', name: 'user_order_list')]
     public function userOrders(): Response
     {
-        if (!this->getUser()) {
+        if (!$this->getUser()) {
             return $this->redirectToRoute('app_login');
         }
         return $this->render('order/user.html.twig', [
